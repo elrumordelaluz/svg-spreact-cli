@@ -3,10 +3,20 @@
 const meow = require('meow')
 const svgSpreact = require('svg-spreact')
 const fs = require('fs')
+const { write: copy } = require('clipboardy')
 const { extname, resolve } = require('path')
 const { promisify } = require('util')
 const readFileAsync = promisify(fs.readFile)
 const readdirAsync = promisify(fs.readdir)
+
+const copyToClipboard = async text => {
+  try {
+    await copy(text)
+    return true
+  } catch (err) {
+    return false
+  }
+}
 
 const cli = meow(
   `
@@ -34,6 +44,26 @@ Examples
         alias: 't',
         default: true,
       },
+      prefix: {
+        type: 'string',
+        alias: 'p',
+        default: '',
+      },
+      suffix: {
+        type: 'string',
+        alias: 's',
+        default: '',
+      },
+      classname: {
+        type: 'string',
+        alias: 'c',
+        default: '',
+      },
+      filename: {
+        type: 'boolean',
+        alias: 'f',
+        default: true,
+      },
     },
   }
 )
@@ -59,14 +89,20 @@ const readFolder = async folder => {
 }
 
 const doSprite = ({ svgsString, filenames }) => {
-  const processId = n => filenames[n]
-  return svgSpreact(svgsString, { ...cli.flags, processId })
+  const { optimize, tidy, prefix, suffix, classname, filename } = cli.flags
+  const processId = n => `${prefix}${filename ? filenames[n] : n}${suffix}`
+  return svgSpreact(svgsString, { optimize, tidy, processId, classname })
 }
 
 readFolder(cli.input[0])
   .then(doSprite)
   .then(({ defs, refs }) => {
-    console.log(defs)
-    console.log(refs)
+    const output = `
+${defs}
+
+${refs}`
+    console.log(output)
+    return output
   })
+  .then(copyToClipboard)
   .catch(e => console.log(e))

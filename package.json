@@ -6,8 +6,9 @@
   "author": "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
   "license": "MIT",
   "dependencies": {
+    "clipboardy": "1.2.3",
     "meow": "4.0.0",
-    "svg-spreact": "1.1.2"
+    "svg-spreact": "1.2.0"
   },
   "bin": {
     "svg-spreact": "cli.js"
