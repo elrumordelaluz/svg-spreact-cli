@@ -1,10 +1,9 @@
 {
   "name": "svg-spreact-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/elrumordelaluz/outline-stroke-cli.git",
-  "author":
-    "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
+  "author": "Lionel T <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
   "license": "MIT",
   "dependencies": {
     "meow": "4.0.0",
@@ -16,5 +15,7 @@
   "engines": {
     "node": ">=8"
   },
-  "files": ["cli.js"]
+  "files": [
+    "cli.js"
+  ]
 }
