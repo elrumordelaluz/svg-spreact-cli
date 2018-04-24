@@ -74,7 +74,7 @@ const doSprite = ({ svgsString, filenames }) => {
     return node
   }
 
-  return svgSpreact(svgsString, cli.flags)
+  return svgSpreact(svgsString, { ...cli.flags, processIds })
 }
 
 readFolder(cli.input[0])
