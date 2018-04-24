@@ -808,9 +808,9 @@ strip-indent@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-2.0.0.tgz#5ef8db295d01e6ed6cbf7aab96998d7822527b68"
 
-svg-spreact@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/svg-spreact/-/svg-spreact-1.1.1.tgz#fad9644d93b7c03bc820e4a1936cd67063e62b35"
+svg-spreact@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/svg-spreact/-/svg-spreact-1.1.2.tgz#6b46db2a8bebdd5f4c63c19b61cde5b0e0691203"
   dependencies:
     pretty "2.0.0"
     react "16.3.2"

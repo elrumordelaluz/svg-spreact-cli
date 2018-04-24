@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "meow": "4.0.0",
-    "svg-spreact": "1.1.1"
+    "svg-spreact": "1.1.2"
   },
   "bin": {
     "svg-spreact": "cli.js"
