@@ -60,7 +60,7 @@ const readFolder = async folder => {
 
 const doSprite = ({ svgsString, filenames }) => {
   let n = 0
-  const processIds = node => {
+  const transformNode = node => {
     if (node.name === 'svg') {
       const id = filenames[n++]
       return {
@@ -74,7 +74,7 @@ const doSprite = ({ svgsString, filenames }) => {
     return node
   }
 
-  return svgSpreact(svgsString, { ...cli.flags, processIds })
+  return svgSpreact(svgsString, { ...cli.flags, transformNode })
 }
 
 readFolder(cli.input[0])
