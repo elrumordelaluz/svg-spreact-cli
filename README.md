@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="SVG Spreact" title="SVG Spreact" src="/logo.svg" width="450">
+  <img alt="SVG Spreact" title="SVG Spreact" src="https://cdn.rawgit.com/elrumordelaluz/svg-spreact/2b58118b/logo.svg" width="450">
 </p>
 
 <p align="center">
