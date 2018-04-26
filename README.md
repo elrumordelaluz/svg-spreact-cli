@@ -28,7 +28,8 @@ svg-spreact <folder> [options]
 svg-spreact ./icons --optimize true --tidy false
 ```
 
-Will log the output (defs `<symbols>` and refs `<use>`) and automatically copies to _Clipboard_
+* Will log the output (defs `<symbols>` and refs `<use>`).
+* Automatically **copy the output into Clipboard**
 
 ```zsh
 svg-spreact ./icons > sprite.svg
