@@ -18,6 +18,10 @@ npm i -g svg-spreact-cli
 svg-spreact <folder> [options]
 ```
 
+<p align="center">
+  <img alt="svg-spreact demo" title="svg-spreact demo" src="https://cdn.rawgit.com/elrumordelaluz/svg-spreact-cli/87a503e8/demo.gif" width="450">
+</p>
+
 ## Example
 
 ```zsh
