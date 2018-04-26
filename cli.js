@@ -24,8 +24,12 @@ Usage
   $ svg-spreact <folder>
   
 Options
-  --optimize, -o  Optimize output
-  --tidy, -t      Prettify output
+  --optimize, -o    Optimize output
+  --tidy, -t        Prettify output
+  --preffix, -p     Add a prefix into the id
+  --suffix, -s      Add a suffix into the id
+  --classname, -c   Add a classname to each <use> element
+  --filename, -f    Use the filename as id or not
 	
 Examples
   $ svg-spreact ./icons
@@ -89,9 +93,21 @@ const readFolder = async folder => {
 }
 
 const doSprite = ({ svgsString, filenames }) => {
-  const { optimize, tidy, prefix, suffix, classname, filename } = cli.flags
+  const {
+    optimize,
+    tidy,
+    prefix,
+    suffix,
+    classname: className,
+    filename,
+  } = cli.flags
   const processId = n => `${prefix}${filename ? filenames[n] : n}${suffix}`
-  return svgSpreact(svgsString, { optimize, tidy, processId, classname })
+  return svgSpreact(svgsString, {
+    optimize,
+    tidy,
+    processId,
+    className,
+  })
 }
 
 readFolder(cli.input[0])
