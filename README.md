@@ -52,3 +52,7 @@ Default: `./`
 ## Related
 
 [svg-spreact](https://github.com/elrumordelaluz/svg-spreact) Main Package
+
+[web-app](https://elrumordelaluz.github.io/micro-svg-spreact/)
+
+`[POST]` [endpoint](https://micro-svg-spreact.now.sh/) | [docs](https://github.com/elrumordelaluz/micro-svg-spreact)
