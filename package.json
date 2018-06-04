@@ -8,7 +8,7 @@
   "dependencies": {
     "clipboardy": "1.2.3",
     "meow": "5.0.0",
-    "svg-spreact": "1.2.1"
+    "svg-spreact": "1.3.0"
   },
   "bin": {
     "svg-spreact": "cli.js"
